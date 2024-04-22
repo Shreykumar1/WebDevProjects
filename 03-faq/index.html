@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Frontend Mentor | FAQ Accordion Card</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style></style>
+  </head>
+  <body>
+    <main>
+      <div class="faq">
+
+        <div class="image">
+          <img src="./images/illustration-woman-online-mobile.svg" alt="" class="img img-mobile ">
+          <img src="./images/bg-pattern-mobile.svg" alt="" class="bg-mobile">
+
+          <img src="./images/illustration-woman-online-desktop.svg" alt="" class="img img-desktop">
+          <!-- <img src="./images/bg-pattern-desktop.svg" alt="" class="bg-desktop"> -->
+          <img src="./images/illustration-box-desktop.svg" alt="" class="box">
+
+
+
+        </div>
+
+        <div class="container2">
+          <div class="faq-heading">
+           <h1 class="h1">FAQ</h1>
+          </div>
+
+          <div class="text-container">
+
+
+
+          <div class="text-content">
+            
+            <div class="heading-container">
+            <h3 class="text-heading" id="text-1" >How many team members can I invite?</h3>
+            <!-- <a href="#"  style="padding: 10px;"  class="btn"><ion-icon name="chevron-down-outline"></ion-icon> </a> -->
+            <button class="btn" onclick="myFunction1()" id="btn-1"  ><ion-icon name="chevron-down-outline"></ion-icon></button>
+          </div>
+
+            <p class="text-para"  id="para-1" >
+              You can invite up to 2 additional users on the Free plan. There is
+              no limit on team members for the Premium plan.
+            </p>
+
+          </div>
+          
+
+
+          <div class="text-content">
+
+          <div class="heading-container">
+            <h3 class="text-heading" id="text-2" >
+            What is the maximum file upload size?
+            </h3>
+            <button class="btn" onclick="myFunction2()" id="btn-2"  ><ion-icon name="chevron-down-outline"></ion-icon></button>
+          </div>
+
+            <p class="text-para" id="para-2">
+              No more than 2GB. All files in your account must fit your allotted
+              storage space.
+            </p>
+
+          </div>
+
+
+
+          <div class="text-content">
+
+            <div class="heading-container">
+              <h3 class="text-heading" id="text-3" >
+              How do I reset my password?
+              </h3>
+              <button class="btn" onclick="myFunction3()" id="btn-3"  ><ion-icon name="chevron-down-outline"></ion-icon></button>
+            </div>
+
+            <p class="text-para" id="para-3" >
+              Click “Forgot password” from the login page or “Change password”
+              from your profile page. A reset link will be emailed to you.
+            </p>
+
+          </div>
+
+
+
+          <div class="text-content">
+
+            <div class="heading-container">
+              <h3 class="text-heading" id="text-4" >Can I cancel my subscription?</h3>
+              <button class="btn" onclick="myFunction4()" id="btn-4"  ><ion-icon name="chevron-down-outline"></ion-icon></button>
+            </div>
+
+            <p class="text-para" id="para-4" >
+              Yes! Send us a message and we&#x2019;ll process your request no
+              questions asked.
+            </p>
+
+          </div>
+
+
+
+          <div class="text-content">
+
+            <div class="heading-container">
+            <h3 class="text-heading" id="text-5" >Do you provide additional support?</h3>
+            <button class="btn" onclick="myFunction5()" id="btn-5"  ><ion-icon name="chevron-down-outline"></ion-icon></button>
+            </div>
+
+            <p class="text-para" id="para-5">
+              Chat and email support is available 24/7. Phone lines are open
+              during normal business hours.
+            </p>
+
+          </div>
+
+
+
+          </div>
+       </div>
+      </div>
+    </main>
+
+    <div class="attribution" style=" padding-top: 45px; bottom: 10px;">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >.
+      <br> Coded by <a href="#">Shrey Kumar Tamrakar</a>.
+    </div>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+
+<!-- <script src="script.js"></script> -->
+<script>
+
+
+// const button1 = document.getElementById("btn-1");
+// const button2 = document.getElementById("btn-2");
+// const button3 = document.getElementById("btn-3");
+// const button4 = document.getElementById("btn-4");
+// const button5 = document.getElementById("btn-5");
+
+// button1.addEventListener("click",myFunction1);
+
+function myFunction1() {
+
+var para = document.getElementById('para-1');
+var text = document.getElementById('text');
+var displaySetting = para.style.display;
+var ion = document.getElementsByTagName("ion-icon")[0];
+
+
+if (displaySetting == 'block') {
+  para.style.display = 'none';
+  ion.name = "chevron-down-outline";
+  document.getElementById("text-1").style.color = "hsl(240, 6%, 50%)" ;
+}
+else {
+  para.style.display = 'block';
+  document.getElementById("text-1").style.color = "black";
+  ion.name = "chevron-up-outline";
+}
+}
+function myFunction2() {
+
+var para = document.getElementById('para-2');
+var displaySetting = para.style.display;
+var ion = document.getElementsByTagName("ion-icon")[1];
+
+if (displaySetting == 'block') {
+  para.style.display = 'none';
+  ion.name = "chevron-down-outline";
+  document.getElementById("text-2").style.color = "hsl(240, 6%, 50%)" ;
+}
+else {
+  para.style.display = 'block';
+  document.getElementById("text-2").style.color = "black";
+  ion.name = "chevron-up-outline";
+}
+}
+function myFunction3() {
+
+var para = document.getElementById('para-3');
+var displaySetting = para.style.display;
+var ion = document.getElementsByTagName("ion-icon")[2];
+
+if (displaySetting == 'block') {
+  para.style.display = 'none';
+  ion.name = "chevron-down-outline";
+  document.getElementById("text-3").style.color = "hsl(240, 6%, 50%)" ;
+}
+else {
+  para.style.display = 'block';
+  document.getElementById("text-3").style.color = "black";
+  ion.name = "chevron-up-outline";
+}
+}
+function myFunction4() {
+
+var para = document.getElementById('para-4');
+var displaySetting = para.style.display;
+var ion = document.getElementsByTagName("ion-icon")[3];
+
+if (displaySetting == 'block') {
+  para.style.display = 'none';
+  ion.name = "chevron-down-outline";
+  document.getElementById("text-4").style.color = "hsl(240, 6%, 50%)" ;
+}
+else {
+  para.style.display = 'block';
+  document.getElementById("text-4").style.color = "black";
+  ion.name = "chevron-up-outline";
+}
+}
+function myFunction5() {
+
+var para = document.getElementById('para-5');
+var displaySetting = para.style.display;
+var ion = document.getElementsByTagName("ion-icon")[4];
+
+if (displaySetting == 'block') {
+  para.style.display = 'none';
+  ion.name = "chevron-down-outline";
+  document.getElementById("text-5").style.color = "hsl(240, 6%, 50%)" ;
+}
+else {
+  para.style.display = 'block';
+  document.getElementById("text-5").style.color = "black";
+  ion.name = "chevron-up-outline";
+}
+}
+
+
+
+</script>
+
+
+</body>
+</html>
