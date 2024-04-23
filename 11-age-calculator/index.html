@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/age.png"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Google Font LInk -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Age calculator app</title>
+  </head>
+  <body>
+
+    <div class="card">
+      <div class="container">
+
+        <div class="inner_input">
+          <div class="day inputs">
+            <p>DAY</p>
+            <input type="text" id="day_input" placeholder="DD" />
+          </div>
+          <div class="month inputs">
+            <p>MONTH</p>
+            <input type="text" id="month_input" placeholder="MM" />
+          </div>
+          <div class="year inputs">
+            <p>YEAR</p>
+            <input type="text" id="year_input" placeholder="YYYY" />
+          </div>
+          <div class="submit">
+            <button type="submit" id="btn">
+              <img src="./assets/images/icon-arrow.svg" alt="" />
+            </button>
+          </div>
+
+        </div>
+
+
+
+        <div class="inner_display">
+          <div class="display_year display">
+            <h1 class="age"  >--</h1>
+            <h1><i>years</i></h1>
+
+            
+          </div>
+          <div class="display_month display">
+            <h1 class="age"  >--</h1>
+            <h1><i>months</i></h1>
+          </div>
+          <div class="display_day display">
+            <h1 class="age" >--</h1>
+            <h1><i>days</i></h1>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+
+
+
+
+
+    <script>
+      let a = document.getElementsByClassName("age");
+      // a[0].innerHTML = "--";
+      // a[1].innerHTML = "--";
+      // a[2].innerHTML = "--";
+
+      let day_dob = document.getElementById("day_input");
+      let month_dob = document.getElementById("month_input") ;
+      let year_dob = document.getElementById("year_input");
+
+      var dob;
+      var current = new Date();
+
+      
+      let btn = document.getElementById("btn");
+      btn.addEventListener("click", myFunction);
+
+      function myFunction() {
+
+        dob = new Date(year_dob.value,month_dob.value,day_dob.value);
+        let year_current = current.getFullYear();
+        let month_current = 1 + current.getMonth();
+        let day_current = current.getDate();
+
+
+        var month = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];        
+        
+        if(day_dob.value > day_current){
+          day_current = day_current + month[month_current - 1];
+          month_current = month_current - 1;
+        }
+        if(month_dob.value > month_current){
+          month_current = month_current + 12;
+          year_current = year_current - 1 ;
+        }
+        day_age = day_current - day_dob.value;
+        month_age = month_current - month_dob.value   ;
+        year_age =  year_current - year_dob.value ;
+        a[0].innerHTML = year_age ;
+        a[1].innerHTML = month_age;
+        a[2].innerHTML = day_age;
+
+
+        
+      }
+    </script>
+
+
+  </body>
+
+
+
+
+
+
+
+  <!-- let a = document.getElementsByClassName("age");
+  a[0].innerHTML = "19";
+  a[1].innerHTML = "5";
+  a[2].innerHTML = "12";
+
+  let day_dob = document.getElementById("day_input");
+  let month_dob = document.getElementById("month_input");
+  let year_dob = document.getElementById("year_input");
+
+  var dob;
+  var current = new Date();
+  
+  let btn = document.getElementById("btn");
+  btn.addEventListener("click", myFunction);
+  function myFunction() {
+
+    dob = new Date(year_dob.value,month_dob.value,day_dob.value);
+    let d = current.getFullYear();
+    console.log(d);
+    year_age = year_dob - d ;
+    console.log("year age " , year_age);
+    console.log("year dob = " , year_dob);
+    a[0].innerHTML = year_age ;
+
+    
+  } -->
+
+
+
+</html>
