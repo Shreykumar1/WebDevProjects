@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <!-- Linking BoxIcon for Icon -->
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="icon" href="cloudy.png">
+
+    <!-- Linking CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <header>Weather App</header>
+        <section class="input-part">
+            <p class="info-text ">Please enter a valid city name</p>
+            <form action="" id="form">
+            <input type="text" id="input" list="off" placeholder="Enter City Name" spellcheck="false" required >
+            <div class="separator"></div>
+            <button>Submit</button>
+            </form>
+        </section>
+    </div>
+
+    <div class="container">
+        <header><i class="bx bx-left-arrow-alt" id="back" style="position: relative;top: 6px;" ></i>Weather App</header>
+        <div class="picture">
+            <img src="http://openweathermap.org/img/w/02n.png" alt="Weather Picture">
+        </div>
+        <h1 class="temp"></h1>
+        <h3 class="description" ></h3>
+        <h3 class="location" ></h3>
+        <div class="info">
+            <div class="inner">
+                <h3 class="feels_like"></h3>
+                <h5>Feels Like</h5>
+            </div>
+            <div class="inner">
+                <h3 class="humidity"></h3>
+                <h5>Humidity</h5>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
