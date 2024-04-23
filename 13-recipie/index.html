@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RecipeApp</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./faqstyle.css">
+    <script src="https://kit.fontawesome.com/117117f437.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
+    <link rel="icon" type="image/x-icon" href="./favicon.svg">
+    <!-- Google Font Link-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap"
+        rel="stylesheet" />
+</head>
+<body>
+    <!-- Navbar -->
+    <nav>
+        <div class="navbar">
+            <div class="logo">
+                <img src="./logo-light.svg" alt="Logo">
+            </div>
+            <ul class="links-container">
+                <li class="RecipieLink active" id="navHome" onclick="setPage(event)">Home</li>
+                <li class="RecipieLink" id="navRecipie" onclick="setPage(event)">Recipie</li>
+            </ul>
+            <div>
+                <a href="https://github.com/Shreykumar1/Recipie-App" target="_blank" class="btn btn-dark"><ion-icon style="top: 1px;position: relative;" name="logo-github"></ion-icon>Github</a>
+            </div>
+        </div>
+    </nav>
+    <!-- Home Page-->
+    <div id="homePage">
+        <div class="home-image-container">
+            <img src="./hero-banner-large.jpg" alt="">
+            <div class="container" style="position: relative;top: -300px;">
+                <h1 class="mb-4 mb-sm-4 mb-md-4 mb-lg-5 text-uppercase text-center headingText" style="color: #FFFFFF;">
+                    YOUR DESIRED DISH?</h1>
+                <form class="mb-5">
+                    <div class="inputsSec d-flex align-items-center justify-content-between">
+                        <input type="text" name="" id="EnterRecipiesHome" placeholder="search for recipe...." autofocus
+                            required>
+                        <button type="submit" id="submitInputHome" class="btn submitButton">Search</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="container   p-4" style="position: relative;top: -140px;">
+            <div class="container meal-home-container">
+                <button class="btn mealTypeHome" id="Breakfast">BreakFast</button>
+                <button class="btn mealTypeHome" id="Lunch">Lunch</button>
+                <button class="btn mealTypeHome" id="Snack">Snacks</button>
+                <button class="btn mealTypeHome" id="Dinner">Dinner</button>
+                <button class="btn mealTypeHome" id="Teatime">Teatime</button>
+            </div>
+            <div>
+                <div id="homeRecipie" class="row"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Recipie Page-->
+    <div class="recipies" id="recipePage" style="display: flex;">
+        <div class="selection">
+            <div class="heading-container">
+                <h3 class="text-heading" id="text-4"><ion-icon name="fast-food-outline"></ion-icon>Diet</h3>
+                <button class="btn"><ion-icon onclick="myFunction(event)"
+                        name="chevron-down-outline"></ion-icon></button>
+            </div>
+            <div class="diet-section" id="diet">
+
+                <label for="balanced">Balanced
+                    <input type="checkbox" class="checkbox" name="balanced" id="balanced">
+                </label>
+                <label for="high-fiber">High Fiber
+                    <input type="checkbox" class="checkbox" name="high-fiber" id="high-fiber">
+                </label>
+                <label for="high-protein">High Protein
+                    <input type="checkbox" class="checkbox" name="high-protein" id="high-protein">
+                </label>
+                <label for="low-carb">Low Carb
+                    <input type="checkbox" class="checkbox" name="low-carb" id="low-carb">
+                </label>
+                <label for="low-sodium">Low Sodium
+                    <input type="checkbox" class="checkbox" name="low-sodium" id="low-sodium">
+                </label>
+            </div>
+            <!-- Health -->
+            <div class="heading-container">
+                <h3 class="text-heading" id="text-4"><ion-icon name="medkit-outline"></ion-icon>Health</h3>
+                <button class="btn"><ion-icon onclick="myFunction(event)"
+                        name="chevron-down-outline"></ion-icon></button>
+            </div>
+            <div class="diet-section" id="health">
+
+                <label for="alcohol-cocktail">Alcohol Cocktail
+                    <input type="checkbox" class="checkbox" name="alcohol-cocktail" id="alcohol-cocktail">
+                </label>
+                <label for="alcohol-free">Alcohol Free
+                    <input type="checkbox" class="checkbox" name="alcohol-free" id="alcohol-free">
+                </label>
+                <label for="celery-free">Celery Free
+                    <input type="checkbox" class="checkbox" name="celery-free" id="celery-free">
+                </label>
+                <label for="crustacean-free">Crustcean Free
+                    <input type="checkbox" class="checkbox" name="crustacean-free" id="crustacean-free">
+                </label>
+                <label for="dairy-free">Dairy Free
+                    <input type="checkbox" class="checkbox" name="dairy-free" id="dairy-free">
+                </label>
+                <label for="DASH">DASH
+                    <input type="checkbox" class="checkbox" name="DASH" id="DASH">
+                </label>
+                <label for="egg-free">Egg Free
+                    <input type="checkbox" class="checkbox" name="egg-free" id="egg-free">
+                </label>
+                <label for="gluten-free">Gluten Free
+                    <input type="checkbox" class="checkbox" name="gluten-free" id="gluten-free">
+                </label>
+                <label for="low-sugar">Low Sugar
+                    <input type="checkbox" class="checkbox" name="low-sugar" id="low-sugar">
+                </label>
+                <label for="peanut-free">Peanut Free
+                    <input type="checkbox" class="checkbox" name="peanut-free" id="peanut-free">
+                </label>
+                <label for="vegan">Vegan
+                    <input type="checkbox" class="checkbox" name="vegan" id="vegan">
+                </label>
+                <label for="vegetarian">Vegetarian
+                    <input type="checkbox" class="checkbox" name="vegetarian" id="vegetarian">
+                </label>
+            </div>
+            <!-- Cuisine -->
+            <div class="heading-container">
+                <h3 class="text-heading" id="text-4"><ion-icon name="earth-outline"></ion-icon>Cuisine</h3>
+                <button class="btn"><ion-icon onclick="myFunction(event)"
+                        name="chevron-down-outline"></ion-icon></button>
+            </div>
+            <div class="diet-section" id="cuisineType">
+
+                <label for="american">American
+                    <input type="checkbox" class="checkbox" name="american" id="american">
+                </label>
+                <label for="asian">Asian
+                    <input type="checkbox" class="checkbox" name="asian" id="asian">
+                </label>
+                <label for="british">British
+                    <input type="checkbox" class="checkbox" name="british" id="british">
+                </label>
+                <label for="caribbean">Caribbean
+                    <input type="checkbox" class="checkbox" name="caribbean" id="caribbean">
+                </label>
+                <label for="chinese">Chinese
+                    <input type="checkbox" class="checkbox" name="chinese" id="chinese">
+                </label>
+                <label for="french">French
+                    <input type="checkbox" class="checkbox" name="french" id="french">
+                </label>
+                <label for="indian">Indian
+                    <input type="checkbox" class="checkbox" name="indian" id="indian">
+                </label>
+                <label for="italian">Italian
+                    <input type="checkbox" class="checkbox" name="italian" id="italian">
+                </label>
+                <label for="japanese">Japanese
+                    <input type="checkbox" class="checkbox" name="japanese" id="japanese">
+                </label>
+                <label for="mexican">Mexican
+                    <input type="checkbox" class="checkbox" name="mexican" id="mexican">
+                </label>
+                <label for="mediterranean">Mediterranean
+                    <input type="checkbox" class="checkbox" name="mediterranean" id="mediterranean">
+                </label>
+                <label for="nordic">Nordic
+                    <input type="checkbox" class="checkbox" name="nordic" id="nordic">
+                </label>
+            </div>
+            <!-- Meal -->
+            <div class="heading-container">
+                <h3 class="text-heading" id="text-4"><ion-icon name="beer-outline"></ion-icon>Meal</h3>
+                <button class="btn"><ion-icon onclick="myFunction(event)"name="chevron-down-outline"></ion-icon></button>
+            </div>
+            <div class="diet-section" id="mealType">
+
+
+                <label for="breakfast">Breakfast
+                    <input type="checkbox" class="checkbox" name="breakfast" id="breakfast">
+                </label>
+                <label for="dinner">Dinner
+                    <input type="checkbox" class="checkbox" name="dinner" id="dinner">
+                </label>
+                <label for="lunch">Lunch
+                    <input type="checkbox" class="checkbox" name="lunch" id="lunch">
+                </label>
+                <label for="snack">Snack
+                    <input type="checkbox" class="checkbox" name="snack" id="snack">
+                </label>
+                <label for="teatime">Teatime
+                    <input type="checkbox" class="checkbox" name="teatime" id="teatime">
+                </label>
+
+            </div>
+            <!-- Dish -->
+            <div class="heading-container">
+                <h3 class="text-heading"><ion-icon name="pizza-outline"></ion-icon>Dish</h3>
+                <button class="btn"><ion-icon onclick="myFunction(event)" name="chevron-down-outline"></ion-icon></button>
+            </div>
+            <div class="diet-section" id="dishType">
+                <label for="biscuits and cookies">Biscuits and cookies
+                    <input type="checkbox" class="checkbox" name="biscuits and cookies" id="biscuits and cookies">
+                </label>
+                <label for="bread">Bread
+                    <input type="checkbox" class="checkbox" name="bread" id="bread">
+                </label>
+                <label for="cereals">Cereals
+                    <input type="checkbox" class="checkbox" name="cereals" id="cereals">
+                </label>
+                <label for="condiments and sauces">Condiments and sauces
+                    <input type="checkbox" class="checkbox" name="condiments and sauces" id="condiments and sauces">
+                </label>
+                <label for="desserts">Desserts
+                    <input type="checkbox" class="checkbox" name="desserts" id="desserts">
+                </label>
+                <label for="drinks">Drinks
+                    <input type="checkbox" class="checkbox" name="drinks" id="drinks">
+                </label>
+                <label for="main course">Main course
+                    <input type="checkbox" class="checkbox" name="main course" id="main course">
+                </label>
+                <label for="pancake">Pancake
+                    <input type="checkbox" class="checkbox" name="pancake" id="pancake">
+                </label>
+                <label for="preserve">Preserve
+                    <input type="checkbox" class="checkbox" name="preserve" id="preserve">
+                </label>
+                <label for="sandwiches">Sandwiches
+                    <input type="checkbox" class="checkbox" name="sandwiches" id="sandwiches">
+                </label>
+                <label for="salad">Salad
+                    <input type="checkbox" class="checkbox" name="salad" id="salad">
+                </label>
+                <label for="soup">Soup
+                    <input type="checkbox" class="checkbox" name="soup" id="soup">
+                </label>
+                <label for="sweets">Sweets
+                    <input type="checkbox" class="checkbox" name="sweets" id="sweets">
+                </label>
+
+            </div>
+            <button class="btn btn-dark" onclick="showSelection()">Apply Filter</button>
+        </div>
+
+        <div class="container ">
+            <div class="container banner">
+                <img src="./hero-banner-large.jpg" alt="">
+                <form class="mb-5" style="    top: -190px;
+                position: relative;">
+                    <div class="inputsSec d-flex align-items-center justify-content-between">
+                        <input type="text" name="" id="EnterRecipies" placeholder="search for recipe...." autofocus required>
+                        <button type="submit" id="submitInput" class="btn submitButton"><ion-icon name="search"
+                                style="position: relative;top: 2px;"></ion-icon>Search</button>
+                    </div>
+            </div>
+            </form>
+            <div class="searchResult">
+                <span class="loader" style="display: none;"></span>
+                <div class="row Outputrecipies">
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <main id="main" class="container"></main>
+
+    <footer class="footer" style="display: flex;border-top: 1px solid rgb(255, 184, 53); justify-content: space-between;align-items: center;padding-inline: 20px;">
+        <p style="margin-bottom: 0px;">	&#169;Copyright 2023 Shrey Kumar Tamrakar</p>
+        <img src="./edamam.svg" alt="">
+    </footer>
+
+
+    <script src="index.js"></script>
+    <!-- <script src="detail.js"></script> -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <!-- <script  src="js/Recipie2.js"></script> -->
+</body>
+
+</html>

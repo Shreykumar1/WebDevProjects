@@ -1,0 +1,103 @@
+/* Detail Section */
+
+.detail{
+    /* width: 80%; */
+    display: flex;
+    margin: auto;
+}
+.detail-flag{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.detail-img-container {
+    width: 50%;
+}
+.detail-img-container img{
+    margin-right: 45px;
+    width: 400px;
+    height: 400px;
+}
+.main-detail-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-bottom: 20px;
+}
+.ingredient-container{
+    margin-bottom: 20px;
+}
+.ingredient-container h5{
+    border-bottom: 1px sandybrown solid;
+}
+.ingredient-container p{
+    margin-bottom: auto;
+}
+
+/* Old css */
+.detail-info-container{
+    width: 50%;
+}
+.detail-info-container h2{
+    margin-bottom: 25px;
+    margin-top: 20px;
+}
+.flag{
+    width: 400px;
+    height: 300px;
+}
+.detail-info{
+    display: flex;
+    align-items: flex-start;
+    /* justify-content: space-between; */
+    height: 200px;
+    line-height: 1.7rem;
+}
+.info-left{
+    width: 50%;
+}
+.info-right{
+    width: 50%;
+}
+.detail-info span{
+    font-weight: 700;
+}
+.border-countries{
+    display: flex;
+}
+
+
+.recipie-type {
+    display: flex;
+    flex-wrap: wrap;
+}
+.recipie-type p {
+    background-color: #c19a6b66;
+}
+
+.border{
+    /* border: 1px solid white; */
+    height: fit-content;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-weight: 300;
+    background-color: var(--element);
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    box-shadow: var(--background) 0px 7px 29px 0px;
+    margin-left: 8px;
+    margin-bottom: 10px;
+    border-radius: 3px;
+}
+
+
+/* New Css Written */
+
+.main-detail{
+    display: grid;
+    place-items: center;
+    padding-left: 20px;
+    padding-right: 20px
+}
+.middle{
+    border-right: 1px solid grey;
+    border-left: 1px solid grey;
+}
