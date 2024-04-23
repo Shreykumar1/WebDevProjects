@@ -32,7 +32,7 @@ This is a basic sketching application built using HTML, CSS, and JavaScript. It 
 ![Sketch App Preview](sketch_app_preview.png)
 
 ### Credits:
-This sketch app was created by [Your Name]. 
+This sketch app was created by Shrey Kumar Tamrakar. 
 
 ### License:
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
