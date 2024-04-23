@@ -1,0 +1,103 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#wrapper {
+  width: 500px;
+  height: 500px;
+  display: flex;
+  flex-wrap: wrap;
+}
+#wrapper > div {
+  /* flex: 1 1 100px; */
+  height: 10px;
+  width: auto;
+}
+div {
+  /* border: 1px solid black; */
+  outline: 1px solid black;
+  transition: 1s;
+}
+div:hover {
+  /* background-color: black; */
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+  /* transition: cubic-bezier(0.175, 0.885, 0.32, 1.275); */
+}
+input {
+  margin-bottom: 20px;
+  width: 100%;
+  border: 3px solid #000;
+  border-radius: 5px;
+  height: 50px;
+  line-height: normal;
+  color: #282828;
+  display: block;
+  /* width: 100%; */
+  box-sizing: border-box;
+  user-select: auto;
+  font-size: 16px;
+  padding: 0 6px;
+  padding-left: 12px;
+  :focus {
+    border: 3px solid #5551ff;
+  }
+}
+#submit {
+  width: 100%;
+  display: inline-block;
+  outline: none;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 1;
+  border-radius: 500px;
+  transition-property: background-color, border-color, color, box-shadow, filter;
+  transition-duration: 0.3s;
+  border: 1px solid transparent;
+  letter-spacing: 2px;
+  min-width: 160px;
+  text-transform: uppercase;
+  white-space: normal;
+  font-weight: 700;
+  text-align: center;
+  padding: 17px 48px;
+  color: #fff;
+  background-color: #1ed760;
+  height: 48px;
+  :hover {
+    transform: scale(1.04);
+    background-color: #21e065;
+  }
+}
+
+h1 {
+  font-size: 4rem; /* Adjust the font size as needed */
+  font-weight: bold; /* Make the text bold for emphasis */
+  color: #333; /* Set the text color */
+  text-align: center; /* Center-align the text */
+  margin-bottom: 20px; /* Add some bottom margin for spacing */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Add a subtle text shadow for depth */
+  /* Add any other styles you desire */
+}
+
+
+
+
+
+
+
+@media (max-width: 500px) {
+  /* CSS styles to apply when the screen width is less than 400px */
+  h1 {
+    font-size: 3rem; /* Decrease font size for smaller screens */
+  }
+  #main {
+    width: 300px;
+  }
+  #wrapper {
+    width: 300px;
+  }
+}
