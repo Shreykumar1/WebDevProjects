@@ -1,6 +1,3 @@
-Certainly! Here's the updated README with additional information about it being your first project and a challenge from Frontend Mentor:
-
----
 
 # QR Project
 
