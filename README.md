@@ -1,5 +1,5 @@
 # WebDevProjects
-
+[![Shrey's GitHub stats](https://github-readme-stats.vercel.app/api?username=Shreykumar1)](https://github.com/anuraghazra/github-readme-stats)
 Welcome to WebDevProjects! This repository showcases a collection of personal web development projects I've created to enhance my skills in HTML, CSS, and JavaScript. Each project is designed to be fully responsive and demonstrates my growth from tackling CSS challenges to implementing advanced JavaScript features.
 
 ## Projects
